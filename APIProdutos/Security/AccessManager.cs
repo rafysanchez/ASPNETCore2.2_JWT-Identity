@@ -79,7 +79,7 @@ namespace APIProdutos.Security
                 NotBefore = dataCriacao,
                 Expires = dataExpiracao
             });
-            var token = handler.WriteToken(securityToken);
+            var token = handler.WriteToken(securityToken); // gerando o token
 
             return new Token()
             {
@@ -88,7 +88,7 @@ namespace APIProdutos.Security
                 Expiration = dataExpiracao.ToString("yyyy-MM-dd HH:mm:ss"),
                 AccessToken = token,
                 Message = "OK"
-            };
+            }; // voltando o token
         }
     }
 }
